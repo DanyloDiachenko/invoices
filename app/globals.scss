@@ -1,5 +1,7 @@
 :root {
     --purple: #7c5dfa;
+
+    --transition: 0.1s;
 }
 
 * {
@@ -14,21 +16,26 @@ body {
     overflow-x: hidden;
 }
 
+body {
+    display: grid;
+    grid-template-columns: 80px auto;
+}
+
 body[data-theme="dark"] {
     --background-primary: #141625;
-    --background-additional: #ffffff;
+    --background-additional: #1e2139;
     --text-color: #ffffff;
 }
 
 body[data-theme="light"] {
     --background-primary: #f8f8fb99;
-    --background-additional: #1e2139;
+    --background-additional: #ffffff;
     --text-color: #000000;
 }
 
 body {
-    color: var(--background-primary);
-    background-color: var(--colors-bg);
+    color: var(--text-color);
+    background-color: var(--background-primary);
 
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -37,4 +44,10 @@ body {
 h1 {
     font-size: 2.25rem;
     line-height: 2.5rem;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
 }
