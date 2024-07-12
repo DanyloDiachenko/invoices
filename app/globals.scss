@@ -1,5 +1,6 @@
 :root {
-    --purple: #7c5dfa;
+    --purple: rgb(124, 93, 250);
+    --purple-opacity: rgb(124, 93, 250, 0.5);
 
     --transition: 0.1s;
 }
@@ -19,26 +20,34 @@ body {
 body {
     display: grid;
     grid-template-columns: 80px auto;
+    align-items: start;
 }
 
 body[data-theme="dark"] {
-    --background-primary: #141625;
-    --background-additional: #1e2139;
-    --text-color: #ffffff;
+    --background-primary: rgb(20, 22, 37);
+    --background-secondary: rgb(30, 33, 57);
+    --text: rgb(255, 255, 255);
+    --text-secondary: rgb(223, 227, 250);
 }
 
 body[data-theme="light"] {
-    --background-primary: #f8f8fb99;
-    --background-additional: #ffffff;
-    --text-color: #000000;
+    --background-primary: rgb(248, 248, 251);
+    --background-secondary: rgb(255, 255, 255);
+    --text: rgb(12, 14, 22);
+    --text-secondary: rgb(126, 136, 195);
 }
 
 body {
-    color: var(--text-color);
+    color: var(--text);
     background-color: var(--background-primary);
 
     font-size: 0.875rem;
     line-height: 1.25rem;
+}
+
+main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 h1 {

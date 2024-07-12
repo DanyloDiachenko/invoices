@@ -1,0 +1,41 @@
+.selectWrapper {
+    position: relative;
+
+    .activeVariant {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        cursor: pointer;
+        background: var(--background-secondary);
+        border-radius: 8px;
+    }
+
+    .variants {
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 55px;
+        left: 0;
+        border-radius: 8px;
+        background: var(--background-secondary);
+        padding: 8px 4px;
+
+        .variant {
+            padding: 6px 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 4px;
+
+            &:hover {
+                background: var(--purple-opacity);
+                color: #ffffff;
+            }
+
+            &.activeVariantTitle {
+                background: var(--purple);
+                color: #ffffff;
+            }
+        }
+    }
+}

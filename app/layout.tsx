@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 import "./globals.scss";
 import { Sidebar } from "@/components/blocks/Sidebar";
 import { useState } from "react";
+import { Header } from "@/components/blocks/Header";
 
 const roboto = Roboto({
     weight: ["300", "400", "500", "700"],
@@ -28,7 +29,8 @@ const RootLayout = ({
         <html lang="en">
             <body className={roboto.className} data-theme={theme}>
                 <Sidebar theme={theme} onThemeSwitch={onThemeSwitch} />
-                {children}
+                <Header />
+                <main>{children}</main>
             </body>
         </html>
     );
